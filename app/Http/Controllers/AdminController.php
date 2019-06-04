@@ -240,7 +240,7 @@ class AdminController extends Controllers
 
   public function listEvents()
   {
-    $user_id = session('user_id');
+    $user_id = session('user.id');
     $calendar_ids = Calendar::where('user_id', '=', $user_id)
       -> lists('calendar_id')
       -> toArray();
